@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang='es-419'>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="icon" href="favicon.ico" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>G3W UNS - verificacion_certificados</title>
+
+    <script type='text/javascript' src='/guarani3w/_comp/siu/js/guarani_mash.js' charset="iso-8859-1"></script>
+    <script type='text/javascript' src='/guarani3w/_comp/siu/js/jquery.ui.touch-punch.min.js'
+        charset="iso-8859-1"></script>
+    <link type='text/css' href='css/guarani2.css' rel='stylesheet' />
+    <link type='text/css' href='css/guarani1.css' rel='stylesheet' />
+
+
+    <script type='text/javascript'>
+        var kernel_config = {
+            widget_count: 1,
+            // Stalls js load until all widgets have loaded css and rendered its content
+            stall_js: false,
+            log: true,
+            alias: '/guarani3w',
+            pretty_urls: true,
+            op_default: 'acceso',
+            op_actual: 'cert_verificacion',
+            historia_activa: false,
+            es_produccion: false
+        };
+        var url_cambio_perfil = "";
+        var url_cambio_carrera = "";
+
+    </script>
+
+
+</head>
+
+<body>
+    <div id='_msg_placeholder' style='display:none;' class='alert' role="alert"></div>
+    <a class="acchide" href="#kernel_contenido" id="saltar_cppal">Saltar al contenido principal</a>
+    <div class="brand-nav">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span3">
+                    <a class="brand" href="https://g3w.uns.edu.ar/guarani3w/acceso">
+                        <h1>
+                            <img style="height: 2.5em;" alt='SIU Guaran&iacute; - Sistema de Gesti&oacute;n Academica'
+                                src="img/logo-transparente_UNS.png" />
+                        </h1>
+                    </a>
+                </div>
+
+                <div class="span9">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="kernel_contenido" role="main" class="container">
+        <div class="titulo_operacion row-fluid">
+            <div class="span12">
+                <h2>Verificación en Línea de Certificaciones </h2>
+
+            </div>
+        </div>
+
+        <div id="layout_una_columna" class="row-fluid">
+            <div id="columna_1" class="span12">
+                <div id="verificacion" class="pagelet" style="display: block; clear: both;">
+                    <div id="mensaje_verificacion" class="alert alert-info">
+                        <h3><span class="negrita">Certificado a verificar:
+                                0e28f7cb3988726eda3fade9833bf581149183213</span></h3>
+                    </div>
+                    <form method="post" id="js-form-verificacion"
+                        action="https://g3w.uns.edu.ar/guarani3w/cert_verificacion/verificar"><input type="hidden"
+                            value="0e28f7cb3988726eda3fade9833bf58114918121" name="hash_verificacion"
+                            id="hash_verificacion"><button type="button" class="btn btn-info pull-right"
+                            id="js-btn-verificar" disabled="">Verificar</button>
+                        <div>&nbsp;</div><br>
+                        <div class="control-group">
+                            <h4>Transcriba el texto de la imagen</h4>
+                            <div class="centrado" style="display: inline-block;">
+                                <div class="centrado margen_id_3 flotar_izquierda"><img
+                                        src="https://g3w.uns.edu.ar/guarani3w/captcha" id="id_imagen" alt="Captcha">
+                                </div>
+                                <div class="izquierda margen_id_3 flotar_izquierda"><a href="#" id="id_nueva_magen"
+                                        class="negrita">Nueva imagen</a><br><input type="text" name="captcha"
+                                        id="captcha" value="" size="32" maxlength="32"></div>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mensaje" role="alert" class="alert alert-error hide font-mensaje"></div>
+                    <div id="tabla" class="hide well centrado margen_aa_10" style="display: block;"><strong>
+                            <h3>Datos de la Certificación</h3>
+                        </strong>
+                        <table id="id_tablaDetalle" class="table table-bordered table-condensed centrado">
+                            <tbody>
+                                <tr class="filaDetalle">
+                                    <td class="celdaDetalleNombre">Tipo de Certificado</td>
+                                    <td class="celdaDetalleValor">Certificado de Alumno Regular</td>
+                                </tr>
+                                <tr class="filaDetalle">
+                                    <td class="celdaDetalleNombre">Fecha de Emisión</td>
+                                    <td class="celdaDetalleValor">16/06/2023 18:17:16</td>
+                                </tr>
+                                <tr class="filaDetalle">
+                                    <td class="celdaDetalleNombre">Legajo</td>
+                                    <td class="celdaDetalleValor">138975</td>
+                                </tr>
+                                <tr class="filaDetalle">
+                                    <td class="celdaDetalleNombre">Apellido y Nombres</td>
+                                    <td class="celdaDetalleValor">MILLAÑANCO, LAHUEN</td>
+                                </tr>
+                                <tr class="filaDetalle">
+                                    <td class="celdaDetalleNombre">Tipo y Nro. de Documento</td>
+                                    <td class="celdaDetalleValor">DNI - 44671548</td>
+                                </tr>
+                                <tr class="filaDetalle">
+                                    <td class="celdaDetalleNombre">
+                                        Carreras en condición de <br>alumno regular
+                                    </td>
+                                    <td class="celdaDetalleValor">
+                                        <ul style="list-style-type: none; padding: 0px; margin: 0px;">
+                                            <li>(198) ARQUITECTURA </li>
+                                        </ul>
+                                    </td>
+                                </tr><!-- Apartado para Analitico -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="file" class="hide" style="display: block;"></div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            type="text/javascript">kernel.renderer.on_arrival({ "css": ["\/guarani3w\/_comp\/uns01\/operaciones\/cert_verificacion\/verificacion\/default.css"], "js": ["\/guarani3w\/_comp\/uns01\/operaciones\/cert_verificacion\/verificacion\/pagelet_verificacion.js"], "op": "cert_verificacion", "info": { "id": "verificacion", "visible": "1", "estado": "inicial", "mensajes": [] }, "content": "<div id=\"mensaje_verificacion\" class=\"alert alert-info\"><h3><span class=\"negrita\">Certificado a verificar: 0e28f7cb3988726eda3fade9833bf58114918121<\/span><\/h3><\/div><form method='post' id='js-form-verificacion' action='https:\/\/g3w.uns.edu.ar\/guarani3w\/cert_verificacion\/verificar'><input type=\"hidden\" value=\"0e28f7cb3988726eda3fade9833bf58114918121\" name=\"hash_verificacion\" id=\"hash_verificacion\" \/><button type=\"button\" class=\"btn btn-info pull-right\" id=\"js-btn-verificar\">Verificar<\/button><div>&nbsp;<\/div><br\/><div class=\"control-group\" ><h4>Transcriba el texto de la imagen<\/h4><div class=\"centrado\" style=\"display: inline-block;\"><div class=\"centrado margen_id_3 flotar_izquierda\"><img src=\"https:\/\/g3w.uns.edu.ar\/guarani3w\/captcha\" id=\"id_imagen\" alt=\"Captcha\" \/><\/div><div class=\"izquierda margen_id_3 flotar_izquierda\"><a href=\"#\" id=\"id_nueva_magen\" class=\"negrita\">Nueva imagen<\/a><br\/><input type=\"text\" name=\"captcha\" id=\"captcha\" value=\"\" size=\"32\" maxlength=\"32\" \/><\/div><\/div><\/div><\/form><div id=\"mensaje\" role=\"alert\" class=\"alert alert-error hide font-mensaje\"><\/div><div id=\"tabla\" class=\"hide well centrado margen_aa_10\" ><strong><h3 >Datos de la Certificaci\u00f3n<\/h3><\/strong><table id=\"id_tablaDetalle\" class=\"table table-bordered table-condensed centrado\"><tbody><tr class=\"filaDetalle\"><td class=\"celdaDetalleNombre\">Tipo de Certificado<\/td><td class=\"celdaDetalleValor\"><\/td><\/tr><tr class=\"filaDetalle\"><td class=\"celdaDetalleNombre\">Fecha de Emisi\u00f3n<\/td><td class=\"celdaDetalleValor\"><\/td><\/tr><tr class=\"filaDetalle\"><td class=\"celdaDetalleNombre\">Legajo<\/td><td class=\"celdaDetalleValor\"><\/td><\/tr><tr class=\"filaDetalle\"><td class=\"celdaDetalleNombre\">Apellido y Nombres<\/td><td class=\"celdaDetalleValor\"><\/td><\/tr><tr class=\"filaDetalle\"><td class=\"celdaDetalleNombre\">Tipo y Nro. de Documento<\/td><td class=\"celdaDetalleValor\"> - <\/td><\/tr><tr class=\"filaDetalle\"><td class=\"celdaDetalleNombre\">\n\t\t\t\t      \t\t\t\tCarrera\t\t\t\t\t\t\n\t\t\t\t      \t\t\t\t<\/td><td class=\"celdaDetalleValor\"><\/td><\/tr><!-- Apartado para Analitico --><\/tbody><\/table><\/div><div id=\"file\" class=\"hide\" ><\/div>" ,"clase_js" :"verificacion" ,"tiene_archivo_js" :"1 "});</script>
+        <script type="text/javascript">kernel_config.pagelet_count = 1</script>
+    </div>
+
+    <footer>
+        <div class='container'>
+            <div class="row">
+                <div class="span6">
+                    <div id='copyleft'>
+
+                    </div>
+                </div>
+                <div class="span6">
+                    <div id='copyright'>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
